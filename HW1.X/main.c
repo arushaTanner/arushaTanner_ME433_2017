@@ -36,9 +36,14 @@
 #pragma config FUSBIDIO = 1 // USB pins controlled by USB module
 #pragma config FVBUSONIO = 1 // USB BUSON controlled by USB module
 
+#define LED LATAbits.LATA4 
+#define PUSH_BUTTON PORTBbits.RB4
 
 int main() {
 
+    TRISAbits.TRISA4=0;
+    TRISBbits.TRISB4=1;
+    
     __builtin_disable_interrupts();
 
     // set the CP0 CONFIG register to indicate that kseg0 is cacheable (0x3)
@@ -60,5 +65,14 @@ int main() {
     while(1) {
 	    // use _CP0_SET_COUNT(0) and _CP0_GET_COUNT() to test the PIC timing
 		  // remember the core timer runs at half the CPU speed
+        
+        while(PUSH_BUTTON==0){}
+        
+        _CP0_SET_COUNT(0);
+        while(_CP0_GET_COUNT()<12000){}
+        
+        if(LED==1)LED=0;
+        else LED=1;
+        
     }
 }
