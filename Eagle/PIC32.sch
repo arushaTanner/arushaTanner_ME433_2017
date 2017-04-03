@@ -11433,21 +11433,21 @@ IC needs to have legs bent before insertion.</description>
 <description>&lt;h3&gt;Reed Switch - Insulated Case - PTH&lt;/h3&gt;
 &lt;p&gt;A reed switch is a magnetically-actuated switch. When the device is exposed to a magnetic field, the two ferrous materials inside the switch pull together and the switch closes.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://cdn.sparkfun.com/datasheets/Dev/LilyPad/RS-01C.jpg"&gt;Datasheet&lt;/a&gt; (RS-01C)&lt;/p&gt;</description>
-<wire x1="-7.5" y1="-1.65" x2="7.5" y2="-1.65" width="0.2032" layer="21"/>
-<wire x1="-7.5" y1="-1.65" x2="-7.5" y2="0" width="0.2032" layer="21"/>
-<wire x1="-7.5" y1="0" x2="-7.5" y2="1.65" width="0.2032" layer="21"/>
-<wire x1="-7.5" y1="1.65" x2="7.5" y2="1.65" width="0.2032" layer="21"/>
-<wire x1="7.5" y1="1.65" x2="7.5" y2="0" width="0.2032" layer="21"/>
-<wire x1="7.5" y1="0" x2="7.5" y2="-1.65" width="0.2032" layer="21"/>
-<wire x1="-7.5" y1="0" x2="-7.72" y2="0" width="0.2032" layer="21"/>
-<wire x1="7.5" y1="0" x2="7.72" y2="0" width="0.2032" layer="21"/>
-<pad name="P$1" x="-6.35" y="0" drill="1.016" diameter="1.8796"/>
-<pad name="P$2" x="6.35" y="0" drill="1.016" diameter="1.8796"/>
+<wire x1="-4.96" y1="-1.65" x2="4.96" y2="-1.65" width="0.2032" layer="21"/>
+<wire x1="-4.96" y1="-1.65" x2="-4.96" y2="0" width="0.2032" layer="21"/>
+<wire x1="-4.96" y1="0" x2="-4.96" y2="1.65" width="0.2032" layer="21"/>
+<wire x1="-4.96" y1="1.65" x2="4.96" y2="1.65" width="0.2032" layer="21"/>
+<wire x1="4.96" y1="1.65" x2="4.96" y2="0" width="0.2032" layer="21"/>
+<wire x1="4.96" y1="0" x2="4.96" y2="-1.65" width="0.2032" layer="21"/>
+<wire x1="-4.96" y1="0" x2="-5.18" y2="0" width="0.2032" layer="21"/>
+<wire x1="4.96" y1="0" x2="5.18" y2="0" width="0.2032" layer="21"/>
+<pad name="P$1" x="-2.54" y="0" drill="1.016" diameter="1.8796"/>
+<pad name="P$2" x="2.54" y="0" drill="1.016" diameter="1.8796"/>
 <text x="0" y="1.778" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;Name</text>
 <text x="0" y="-1.778" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;Value</text>
-<wire x1="-2.54" y1="0" x2="1.27" y2="1.27" width="0.127" layer="21"/>
-<wire x1="-5.08" y1="0" x2="-2.54" y2="0" width="0.127" layer="21"/>
-<wire x1="1.27" y1="0" x2="5.08" y2="0" width="0.127" layer="21"/>
+<wire x1="-0.635" y1="0" x2="0.635" y2="1.27" width="0.127" layer="21"/>
+<wire x1="0.635" y1="0" x2="1.27" y2="0" width="0.127" layer="21"/>
+<wire x1="-0.635" y1="0" x2="-1.27" y2="0" width="0.127" layer="21"/>
 </package>
 <package name="1X05">
 <description>&lt;h3&gt;Plated Through Hole - 5 Pin&lt;/h3&gt;
@@ -11956,24 +11956,24 @@ IC needs to have legs bent before insertion.</description>
 <part name="R2" library="resistor" deviceset="R-US_" device="0207/10" value="330"/>
 <part name="R3" library="resistor" deviceset="R-US_" device="0207/10" value="10k"/>
 <part name="R4" library="resistor" deviceset="R-US_" device="0207/10" value="10k"/>
-<part name="C1" library="resistor" deviceset="C-US" device="025-025X050"/>
-<part name="C2" library="resistor" deviceset="C-US" device="025-025X050"/>
-<part name="C3" library="resistor" deviceset="C-US" device="025-025X050"/>
-<part name="C4" library="resistor" deviceset="C-US" device="025-025X050"/>
-<part name="C7" library="resistor" deviceset="CPOL-US" device="E5-8.5"/>
-<part name="C8" library="resistor" deviceset="CPOL-US" device="E5-8.5"/>
+<part name="C1" library="resistor" deviceset="C-US" device="025-025X050" value=".1uF"/>
+<part name="C2" library="resistor" deviceset="C-US" device="025-025X050" value=".1uF"/>
+<part name="C3" library="resistor" deviceset="C-US" device="025-025X050" value=".1uF"/>
+<part name="C4" library="resistor" deviceset="C-US" device="025-025X050" value=".1uF"/>
+<part name="C7" library="resistor" deviceset="CPOL-US" device="E5-8.5" value="10uF"/>
+<part name="C8" library="resistor" deviceset="CPOL-US" device="E5-8.5" value="10uF"/>
 <part name="LED1" library="led" deviceset="TLLG4400" device=""/>
 <part name="LED2" library="led" deviceset="TLLR4400" device=""/>
-<part name="U$1" library="meche-433" deviceset="MCP1702" device=""/>
-<part name="U$3" library="meche-433" deviceset="8MHZ_OSCILLATOR" device=""/>
-<part name="U$4" library="meche-433" deviceset="PIC32MX250F128_DIP" device=""/>
+<part name="REG" library="meche-433" deviceset="MCP1702" device=""/>
+<part name="..." library="meche-433" deviceset="8MHZ_OSCILLATOR" device=""/>
+<part name="DIP_28" library="meche-433" deviceset="PIC32MX250F128_DIP" device=""/>
 <part name="U$5" library="meche-433" deviceset="SLIDE_SWITCH" device=""/>
-<part name="U$6" library="meche-433" deviceset="USB_MINI_B" device=""/>
-<part name="U$7" library="meche-433" deviceset="PUSH_BUTTON" device=""/>
-<part name="U$8" library="meche-433" deviceset="PUSH_BUTTON" device=""/>
-<part name="U$11" library="meche-433" deviceset="PICKIT3" device=""/>
-<part name="U$2" library="meche-433" deviceset="HEADER1" device=""/>
-<part name="U$9" library="meche-433" deviceset="HEADER2" device=""/>
+<part name="." library="meche-433" deviceset="USB_MINI_B" device=""/>
+<part name="RESET" library="meche-433" deviceset="PUSH_BUTTON" device=""/>
+<part name="USER" library="meche-433" deviceset="PUSH_BUTTON" device=""/>
+<part name=".." library="meche-433" deviceset="PICKIT3" device=""/>
+<part name="LEFT" library="meche-433" deviceset="HEADER1" device=""/>
+<part name="RIGHT" library="meche-433" deviceset="HEADER2" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11992,25 +11992,25 @@ IC needs to have legs bent before insertion.</description>
 <instance part="C8" gate="G$1" x="106.68" y="40.64" rot="R90"/>
 <instance part="LED1" gate="G$1" x="22.86" y="-20.32" rot="R270"/>
 <instance part="LED2" gate="G$1" x="27.94" y="124.46"/>
-<instance part="U$1" gate="G$1" x="-55.88" y="129.54"/>
-<instance part="U$3" gate="G$1" x="-2.54" y="12.7"/>
-<instance part="U$4" gate="G$1" x="91.44" y="53.34"/>
+<instance part="REG" gate="G$1" x="-55.88" y="129.54"/>
+<instance part="..." gate="G$1" x="-2.54" y="12.7"/>
+<instance part="DIP_28" gate="G$1" x="91.44" y="53.34"/>
 <instance part="U$5" gate="G$1" x="5.08" y="127"/>
-<instance part="U$6" gate="G$1" x="-104.14" y="119.38" rot="MR0"/>
-<instance part="U$7" gate="G$1" x="5.08" y="101.6"/>
-<instance part="U$8" gate="G$1" x="10.16" y="-10.16"/>
-<instance part="U$11" gate="G$1" x="0" y="35.56"/>
-<instance part="U$2" gate="G$1" x="0" y="76.2"/>
-<instance part="U$9" gate="G$1" x="104.14" y="58.42"/>
+<instance part="." gate="G$1" x="-104.14" y="119.38" rot="MR0"/>
+<instance part="RESET" gate="G$1" x="5.08" y="101.6"/>
+<instance part="USER" gate="G$1" x="10.16" y="-10.16"/>
+<instance part=".." gate="G$1" x="0" y="35.56"/>
+<instance part="LEFT" gate="G$1" x="0" y="76.2"/>
+<instance part="RIGHT" gate="G$1" x="104.14" y="58.42"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="GND" class="0">
 <segment>
-<pinref part="U$6" gate="G$1" pin="5.GND"/>
+<pinref part="." gate="G$1" pin="5.GND"/>
 <wire x1="-99.06" y1="114.3" x2="-81.28" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="1.GND"/>
+<pinref part="REG" gate="G$1" pin="1.GND"/>
 <wire x1="-81.28" y1="114.3" x2="-55.88" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="-55.88" y1="114.3" x2="-55.88" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
@@ -12033,7 +12033,7 @@ IC needs to have legs bent before insertion.</description>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="-25.4" y1="101.6" x2="-25.4" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="-25.4" y1="2.54" x2="7.62" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="U$8" gate="G$1" pin="1"/>
+<pinref part="USER" gate="G$1" pin="1"/>
 <wire x1="5.08" y1="-10.16" x2="-25.4" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="-25.4" y1="-10.16" x2="-25.4" y2="2.54" width="0.1524" layer="91"/>
 <junction x="-25.4" y="2.54"/>
@@ -12041,12 +12041,12 @@ IC needs to have legs bent before insertion.</description>
 <junction x="-25.4" y="-10.16"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="-25.4" y1="-20.32" x2="2.54" y2="-20.32" width="0.1524" layer="91"/>
-<pinref part="U$7" gate="G$1" pin="1"/>
+<pinref part="RESET" gate="G$1" pin="1"/>
 <wire x1="0" y1="101.6" x2="-25.4" y2="101.6" width="0.1524" layer="91"/>
 <junction x="-25.4" y="101.6"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="27.AVSS"/>
+<pinref part="DIP_28" gate="G$1" pin="27.AVSS"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="76.2" x2="99.06" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="76.2" x2="99.06" y2="78.74" width="0.1524" layer="91"/>
@@ -12059,25 +12059,29 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="111.76" y1="40.64" x2="119.38" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="2.GND"/>
+<pinref part="..." gate="G$1" pin="2.GND"/>
 <wire x1="-17.78" y1="12.7" x2="-15.24" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="8.VSS"/>
+<pinref part="DIP_28" gate="G$1" pin="8.VSS"/>
 <wire x1="45.72" y1="45.72" x2="43.18" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="8.GND"/>
+<pinref part="LEFT" gate="G$1" pin="8.GND"/>
 <wire x1="5.08" y1="68.58" x2="7.62" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$9" gate="G$1" pin="8.GND"/>
+<pinref part="RIGHT" gate="G$1" pin="8.GND"/>
 <wire x1="96.52" y1="50.8" x2="93.98" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part=".." gate="G$1" pin="3.GND"/>
+<wire x1="5.08" y1="25.4" x2="7.62" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="3.VOUT"/>
+<pinref part="REG" gate="G$1" pin="3.VOUT"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="-40.64" y1="129.54" x2="-35.56" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="-35.56" y1="129.54" x2="-35.56" y2="127" width="0.1524" layer="91"/>
@@ -12109,7 +12113,7 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="0" y1="93.98" x2="-33.02" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="28.AVDD"/>
+<pinref part="DIP_28" gate="G$1" pin="28.AVDD"/>
 <wire x1="81.28" y1="83.82" x2="81.28" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="81.28" x2="91.44" y2="81.28" width="0.1524" layer="91"/>
 <junction x="81.28" y="81.28"/>
@@ -12127,69 +12131,75 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="27.94" y1="127" x2="40.64" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="7.V3.3"/>
+<pinref part="LEFT" gate="G$1" pin="7.V3.3"/>
 <wire x1="5.08" y1="71.12" x2="7.62" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$11" gate="G$1" pin="2.V3.3"/>
+<pinref part=".." gate="G$1" pin="2.V3.3"/>
 <wire x1="5.08" y1="30.48" x2="7.62" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="DIP_28" gate="G$1" pin="19.VSS1"/>
+<wire x1="81.28" y1="35.56" x2="83.82" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C3" gate="G$1" pin="2"/>
+<wire x1="15.24" y1="2.54" x2="40.64" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="2.54" x2="40.64" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="DIP_28" gate="G$1" pin="13.VDD"/>
+<wire x1="40.64" y1="20.32" x2="45.72" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="DIP_28" gate="G$1" pin="23.VUSB"/>
+<wire x1="81.28" y1="55.88" x2="83.82" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="U$11" gate="G$1" pin="4.B0"/>
+<pinref part=".." gate="G$1" pin="4.B0"/>
 <wire x1="5.08" y1="40.64" x2="25.4" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="40.64" x2="25.4" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="4.B0"/>
+<pinref part="DIP_28" gate="G$1" pin="4.B0"/>
 <wire x1="25.4" y1="66.04" x2="45.72" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
-<pinref part="U$11" gate="G$1" pin="5.B1"/>
+<pinref part=".." gate="G$1" pin="5.B1"/>
 <wire x1="5.08" y1="35.56" x2="27.94" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="35.56" x2="27.94" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="5.B1"/>
+<pinref part="DIP_28" gate="G$1" pin="5.B1"/>
 <wire x1="27.94" y1="60.96" x2="45.72" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="1.OSC1"/>
+<pinref part="..." gate="G$1" pin="1.OSC1"/>
 <wire x1="12.7" y1="15.24" x2="30.48" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="15.24" x2="30.48" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="9.A2"/>
+<pinref part="DIP_28" gate="G$1" pin="9.A2"/>
 <wire x1="30.48" y1="40.64" x2="45.72" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="3.OSC2"/>
+<pinref part="..." gate="G$1" pin="3.OSC2"/>
 <wire x1="12.7" y1="10.16" x2="33.02" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="10.16" x2="33.02" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="10.A3"/>
+<pinref part="DIP_28" gate="G$1" pin="10.A3"/>
 <wire x1="33.02" y1="35.56" x2="45.72" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$11" class="0">
+<net name="A4" class="0">
 <segment>
-<pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="15.24" y1="2.54" x2="40.64" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="2.54" x2="40.64" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="13.VDD"/>
-<wire x1="40.64" y1="20.32" x2="45.72" y2="20.32" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$13" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="12.LED"/>
+<pinref part="DIP_28" gate="G$1" pin="12.LED"/>
 <wire x1="45.72" y1="25.4" x2="38.1" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="LED1" gate="G$1" pin="A"/>
 <wire x1="38.1" y1="25.4" x2="38.1" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="-20.32" x2="25.4" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="25.4" x2="12.7" y2="25.4" width="0.1524" layer="91"/>
 <junction x="38.1" y="25.4"/>
-<pinref part="U$2" gate="G$1" pin="6.A4"/>
+<pinref part="LEFT" gate="G$1" pin="6.A4"/>
 <wire x1="5.08" y1="73.66" x2="12.7" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="73.66" x2="12.7" y2="25.4" width="0.1524" layer="91"/>
 </segment>
@@ -12203,9 +12213,9 @@ IC needs to have legs bent before insertion.</description>
 </net>
 <net name="MCLR" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="1.MCLR"/>
+<pinref part="DIP_28" gate="G$1" pin="1.MCLR"/>
 <wire x1="22.86" y1="81.28" x2="45.72" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="U$7" gate="G$1" pin="2"/>
+<pinref part="RESET" gate="G$1" pin="2"/>
 <wire x1="10.16" y1="101.6" x2="12.7" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="101.6" x2="12.7" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
@@ -12215,13 +12225,13 @@ IC needs to have legs bent before insertion.</description>
 <junction x="12.7" y="93.98"/>
 <junction x="22.86" y="81.28"/>
 <wire x1="22.86" y1="81.28" x2="22.86" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="U$11" gate="G$1" pin="1.MCLR"/>
+<pinref part=".." gate="G$1" pin="1.MCLR"/>
 <wire x1="22.86" y1="45.72" x2="5.08" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$15" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="20.VCAP"/>
+<pinref part="DIP_28" gate="G$1" pin="20.VCAP"/>
 <pinref part="C8" gate="G$1" pin="+"/>
 <wire x1="104.14" y1="40.64" x2="81.28" y2="40.64" width="0.1524" layer="91"/>
 </segment>
@@ -12229,9 +12239,9 @@ IC needs to have legs bent before insertion.</description>
 <net name="N$17" class="0">
 <segment>
 <wire x1="40.64" y1="78.74" x2="40.64" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="6.B2"/>
+<pinref part="DIP_28" gate="G$1" pin="6.B2"/>
 <wire x1="40.64" y1="55.88" x2="45.72" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="3.B2"/>
+<pinref part="LEFT" gate="G$1" pin="3.B2"/>
 <wire x1="5.08" y1="81.28" x2="20.32" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="81.28" x2="20.32" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="78.74" x2="40.64" y2="78.74" width="0.1524" layer="91"/>
@@ -12239,129 +12249,149 @@ IC needs to have legs bent before insertion.</description>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="26.B15"/>
+<pinref part="DIP_28" gate="G$1" pin="26.B15"/>
 <wire x1="81.28" y1="71.12" x2="93.98" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="71.12" x2="93.98" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="U$9" gate="G$1" pin="1.B15"/>
+<pinref part="RIGHT" gate="G$1" pin="1.B15"/>
 <wire x1="93.98" y1="68.58" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="U$9" gate="G$1" pin="2.B14"/>
-<pinref part="U$4" gate="G$1" pin="25.B14"/>
+<pinref part="RIGHT" gate="G$1" pin="2.B14"/>
+<pinref part="DIP_28" gate="G$1" pin="25.B14"/>
 <wire x1="96.52" y1="66.04" x2="81.28" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$19" class="0">
 <segment>
-<pinref part="U$9" gate="G$1" pin="3.B13"/>
+<pinref part="RIGHT" gate="G$1" pin="3.B13"/>
 <wire x1="96.52" y1="63.5" x2="83.82" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="63.5" x2="83.82" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="24.B13"/>
+<pinref part="DIP_28" gate="G$1" pin="24.B13"/>
 <wire x1="83.82" y1="60.96" x2="81.28" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$20" class="0">
 <segment>
-<pinref part="U$9" gate="G$1" pin="4.B9"/>
+<pinref part="RIGHT" gate="G$1" pin="4.B9"/>
 <wire x1="96.52" y1="60.96" x2="86.36" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="60.96" x2="86.36" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="18.B9"/>
+<pinref part="DIP_28" gate="G$1" pin="18.B9"/>
 <wire x1="86.36" y1="30.48" x2="81.28" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$21" class="0">
 <segment>
-<pinref part="U$9" gate="G$1" pin="5.B8"/>
+<pinref part="RIGHT" gate="G$1" pin="5.B8"/>
 <wire x1="96.52" y1="58.42" x2="88.9" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="58.42" x2="88.9" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="17.B8"/>
+<pinref part="DIP_28" gate="G$1" pin="17.B8"/>
 <wire x1="88.9" y1="25.4" x2="81.28" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$22" class="0">
 <segment>
-<pinref part="U$9" gate="G$1" pin="6.B7"/>
+<pinref part="RIGHT" gate="G$1" pin="6.B7"/>
 <wire x1="96.52" y1="55.88" x2="91.44" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="55.88" x2="91.44" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="16.B7"/>
+<pinref part="DIP_28" gate="G$1" pin="16.B7"/>
 <wire x1="91.44" y1="20.32" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="1.A0"/>
+<pinref part="LEFT" gate="G$1" pin="1.A0"/>
 <wire x1="5.08" y1="86.36" x2="45.72" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="2.A0"/>
+<pinref part="DIP_28" gate="G$1" pin="2.A0"/>
 <wire x1="45.72" y1="86.36" x2="45.72" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$12" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="2.A1"/>
+<pinref part="LEFT" gate="G$1" pin="2.A1"/>
 <wire x1="5.08" y1="83.82" x2="43.18" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="83.82" x2="43.18" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="3.A1"/>
+<pinref part="DIP_28" gate="G$1" pin="3.A1"/>
 <wire x1="43.18" y1="71.12" x2="45.72" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$16" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="4.B3"/>
+<pinref part="LEFT" gate="G$1" pin="4.B3"/>
 <wire x1="5.08" y1="78.74" x2="17.78" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="78.74" x2="17.78" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="76.2" x2="38.1" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="76.2" x2="38.1" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="7.B3"/>
+<pinref part="DIP_28" gate="G$1" pin="7.B3"/>
 <wire x1="38.1" y1="50.8" x2="45.72" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<pinref part="U$11" gate="G$1" pin="3.GND"/>
-<wire x1="5.08" y1="25.4" x2="7.62" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VBUS" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="14.USBID"/>
-<wire x1="45.72" y1="15.24" x2="43.18" y2="15.24" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U$9" gate="G$1" pin="7.V5"/>
+<pinref part="RIGHT" gate="G$1" pin="7.V5"/>
 <wire x1="96.52" y1="53.34" x2="93.98" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="15.VBUS"/>
+<pinref part="DIP_28" gate="G$1" pin="15.VBUS"/>
 <wire x1="81.28" y1="15.24" x2="86.36" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="1.VBUS"/>
+<pinref part="." gate="G$1" pin="1.VBUS"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="-99.06" y1="124.46" x2="-81.28" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="-81.28" y1="124.46" x2="-81.28" y2="129.54" width="0.1524" layer="91"/>
 <junction x="-81.28" y="124.46"/>
-<pinref part="U$1" gate="G$1" pin="2.VIN"/>
+<pinref part="REG" gate="G$1" pin="2.VIN"/>
 <wire x1="-81.28" y1="129.54" x2="-71.12" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$24" class="0">
+<net name="B4" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="5.B4"/>
+<pinref part="LEFT" gate="G$1" pin="5.B4"/>
 <wire x1="5.08" y1="76.2" x2="15.24" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="76.2" x2="15.24" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="11.USER"/>
+<pinref part="DIP_28" gate="G$1" pin="11.USER"/>
 <wire x1="45.72" y1="30.48" x2="35.56" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="30.48" x2="35.56" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="35.56" y1="-2.54" x2="15.24" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="-2.54" x2="35.56" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="35.56" y="-2.54"/>
-<pinref part="U$8" gate="G$1" pin="2"/>
+<pinref part="USER" gate="G$1" pin="2"/>
 <wire x1="35.56" y1="-10.16" x2="15.24" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="30.48" x2="35.56" y2="30.48" width="0.1524" layer="91"/>
 <junction x="35.56" y="30.48"/>
+</segment>
+</net>
+<net name="D-" class="0">
+<segment>
+<pinref part="." gate="G$1" pin="2.D-"/>
+<wire x1="-99.06" y1="121.92" x2="-96.52" y2="121.92" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="DIP_28" gate="G$1" pin="22.D-"/>
+<wire x1="81.28" y1="50.8" x2="83.82" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="D+" class="0">
+<segment>
+<pinref part="." gate="G$1" pin="3.D+"/>
+<wire x1="-99.06" y1="119.38" x2="-96.52" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="DIP_28" gate="G$1" pin="21.D+"/>
+<wire x1="81.28" y1="45.72" x2="83.82" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ID" class="0">
+<segment>
+<pinref part="." gate="G$1" pin="4.ID"/>
+<wire x1="-99.06" y1="116.84" x2="-96.52" y2="116.84" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="DIP_28" gate="G$1" pin="14.USBID"/>
+<wire x1="45.72" y1="15.24" x2="43.18" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
