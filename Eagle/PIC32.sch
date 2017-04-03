@@ -12154,7 +12154,7 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="81.28" y1="55.88" x2="83.82" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="B0" class="0">
 <segment>
 <pinref part=".." gate="G$1" pin="4.B0"/>
 <wire x1="5.08" y1="40.64" x2="25.4" y2="40.64" width="0.1524" layer="91"/>
@@ -12163,7 +12163,7 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="25.4" y1="66.04" x2="45.72" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="B1" class="0">
 <segment>
 <pinref part=".." gate="G$1" pin="5.B1"/>
 <wire x1="5.08" y1="35.56" x2="27.94" y2="35.56" width="0.1524" layer="91"/>
@@ -12172,7 +12172,7 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="27.94" y1="60.96" x2="45.72" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$9" class="0">
+<net name="A2" class="0">
 <segment>
 <pinref part="..." gate="G$1" pin="1.OSC1"/>
 <wire x1="12.7" y1="15.24" x2="30.48" y2="15.24" width="0.1524" layer="91"/>
@@ -12181,7 +12181,7 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="30.48" y1="40.64" x2="45.72" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$10" class="0">
+<net name="A3" class="0">
 <segment>
 <pinref part="..." gate="G$1" pin="3.OSC2"/>
 <wire x1="12.7" y1="10.16" x2="33.02" y2="10.16" width="0.1524" layer="91"/>
@@ -12229,14 +12229,14 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="22.86" y1="45.72" x2="5.08" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$15" class="0">
+<net name="VCAP" class="0">
 <segment>
 <pinref part="DIP_28" gate="G$1" pin="20.VCAP"/>
 <pinref part="C8" gate="G$1" pin="+"/>
 <wire x1="104.14" y1="40.64" x2="81.28" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$17" class="0">
+<net name="B2" class="0">
 <segment>
 <wire x1="40.64" y1="78.74" x2="40.64" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="DIP_28" gate="G$1" pin="6.B2"/>
@@ -12247,7 +12247,7 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="20.32" y1="78.74" x2="40.64" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="B15" class="0">
 <segment>
 <pinref part="DIP_28" gate="G$1" pin="26.B15"/>
 <wire x1="81.28" y1="71.12" x2="93.98" y2="71.12" width="0.1524" layer="91"/>
@@ -12256,14 +12256,14 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="93.98" y1="68.58" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="B14" class="0">
 <segment>
 <pinref part="RIGHT" gate="G$1" pin="2.B14"/>
 <pinref part="DIP_28" gate="G$1" pin="25.B14"/>
 <wire x1="96.52" y1="66.04" x2="81.28" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$19" class="0">
+<net name="B13" class="0">
 <segment>
 <pinref part="RIGHT" gate="G$1" pin="3.B13"/>
 <wire x1="96.52" y1="63.5" x2="83.82" y2="63.5" width="0.1524" layer="91"/>
@@ -12272,7 +12272,7 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="83.82" y1="60.96" x2="81.28" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$20" class="0">
+<net name="B9" class="0">
 <segment>
 <pinref part="RIGHT" gate="G$1" pin="4.B9"/>
 <wire x1="96.52" y1="60.96" x2="86.36" y2="60.96" width="0.1524" layer="91"/>
@@ -12281,7 +12281,7 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="86.36" y1="30.48" x2="81.28" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$21" class="0">
+<net name="B8" class="0">
 <segment>
 <pinref part="RIGHT" gate="G$1" pin="5.B8"/>
 <wire x1="96.52" y1="58.42" x2="88.9" y2="58.42" width="0.1524" layer="91"/>
@@ -12290,7 +12290,7 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="88.9" y1="25.4" x2="81.28" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$22" class="0">
+<net name="B7" class="0">
 <segment>
 <pinref part="RIGHT" gate="G$1" pin="6.B7"/>
 <wire x1="96.52" y1="55.88" x2="91.44" y2="55.88" width="0.1524" layer="91"/>
@@ -12299,7 +12299,7 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="91.44" y1="20.32" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="A0" class="0">
 <segment>
 <pinref part="LEFT" gate="G$1" pin="1.A0"/>
 <wire x1="5.08" y1="86.36" x2="45.72" y2="86.36" width="0.1524" layer="91"/>
@@ -12307,7 +12307,7 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="45.72" y1="86.36" x2="45.72" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$12" class="0">
+<net name="A1" class="0">
 <segment>
 <pinref part="LEFT" gate="G$1" pin="2.A1"/>
 <wire x1="5.08" y1="83.82" x2="43.18" y2="83.82" width="0.1524" layer="91"/>
@@ -12316,7 +12316,7 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="43.18" y1="71.12" x2="45.72" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$16" class="0">
+<net name="B3" class="0">
 <segment>
 <pinref part="LEFT" gate="G$1" pin="4.B3"/>
 <wire x1="5.08" y1="78.74" x2="17.78" y2="78.74" width="0.1524" layer="91"/>
