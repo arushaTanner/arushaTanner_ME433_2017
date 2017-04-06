@@ -11348,46 +11348,45 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391100.pdf"&gt; Data sheet
 <wire x1="1.27" y1="-3.81" x2="-1.27" y2="-3.81" width="0.127" layer="21"/>
 <wire x1="-1.27" y1="-3.81" x2="-1.27" y2="3.81" width="0.127" layer="21"/>
 </package>
-<package name="DIP28">
-<description>Standard 28-pin DIP package.&lt;br&gt;
-IC needs to have legs bent before insertion.</description>
-<pad name="1" x="-16.51" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="2" x="-13.97" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="3" x="-11.43" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="4" x="-8.89" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="5" x="-6.35" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="6" x="-3.81" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="7" x="-1.27" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="8" x="1.27" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="9" x="3.81" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="10" x="6.35" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="11" x="8.89" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="12" x="11.43" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="13" x="13.97" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="14" x="16.51" y="-3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="15" x="16.51" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="16" x="13.97" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="17" x="11.43" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="18" x="8.89" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="19" x="6.35" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="20" x="3.81" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="21" x="1.27" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="22" x="-1.27" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="23" x="-3.81" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="24" x="-6.35" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="25" x="-8.89" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="26" x="-11.43" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="27" x="-13.97" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<pad name="28" x="-16.51" y="3.81" drill="1" diameter="1.6256" rot="R90"/>
-<wire x1="17.78" y1="2.54" x2="-17.78" y2="2.54" width="0.2032" layer="21"/>
-<wire x1="-17.78" y1="-2.54" x2="17.78" y2="-2.54" width="0.2032" layer="21"/>
-<wire x1="17.78" y1="2.54" x2="17.78" y2="-2.54" width="0.2032" layer="21"/>
-<wire x1="-17.78" y1="2.54" x2="-17.78" y2="1.016" width="0.2032" layer="21"/>
-<wire x1="-17.78" y1="-2.54" x2="-17.78" y2="-1.016" width="0.2032" layer="21"/>
-<wire x1="-17.78" y1="-1.016" x2="-17.78" y2="1.016" width="0.2032" layer="21" curve="180"/>
-<circle x="-18.415" y="-3.175" radius="0.508" width="0.254" layer="21"/>
-<text x="-18.415" y="0" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;NAME</text>
-<text x="19.05" y="0" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;VALUE</text>
+<package name="DIL28-3">
+<description>&lt;B&gt;Dual In Line&lt;/B&gt;&lt;p&gt;
+package type P</description>
+<wire x1="-17.78" y1="-1.27" x2="-17.78" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="-17.78" y1="1.27" x2="-17.78" y2="-1.27" width="0.1524" layer="21" curve="-180"/>
+<wire x1="17.78" y1="-2.54" x2="17.78" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-17.78" y1="2.54" x2="-17.78" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-17.78" y1="2.54" x2="17.78" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-17.653" y1="-2.54" x2="17.78" y2="-2.54" width="0.1524" layer="21"/>
+<pad name="1" x="-16.51" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="2" x="-13.97" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="3" x="-11.43" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="4" x="-8.89" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="5" x="-6.35" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="6" x="-3.81" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="7" x="-1.27" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="8" x="1.27" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="9" x="3.81" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="10" x="6.35" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="11" x="8.89" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="12" x="11.43" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="13" x="13.97" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="14" x="16.51" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="15" x="16.51" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="16" x="13.97" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="17" x="11.43" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="18" x="8.89" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="19" x="6.35" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="20" x="3.81" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="21" x="1.27" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="22" x="-1.27" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="23" x="-3.81" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="24" x="-6.35" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="25" x="-8.89" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="26" x="-11.43" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="27" x="-13.97" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="28" x="-16.51" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<text x="-17.907" y="-2.54" size="1.778" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="-15.748" y="-0.9398" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
 </package>
 <package name="SLIDE_SWITCH">
 <pad name="2.VIN" x="0" y="0" drill="0.8"/>
@@ -11479,38 +11478,6 @@ IC needs to have legs bent before insertion.</description>
 &lt;p&gt;Example device(s):
 &lt;ul&gt;&lt;li&gt;CONN_05&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;</description>
-<wire x1="6.985" y1="1.27" x2="8.255" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="8.255" y1="1.27" x2="8.89" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="8.89" y1="-0.635" x2="8.255" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="8.89" y1="0.635" x2="9.525" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="9.525" y1="1.27" x2="10.795" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="10.795" y1="1.27" x2="11.43" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="11.43" y1="-0.635" x2="10.795" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="10.795" y1="-1.27" x2="9.525" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="9.525" y1="-1.27" x2="8.89" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="3.81" y1="0.635" x2="4.445" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="4.445" y1="1.27" x2="5.715" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="5.715" y1="1.27" x2="6.35" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="6.35" y1="-0.635" x2="5.715" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="5.715" y1="-1.27" x2="4.445" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="4.445" y1="-1.27" x2="3.81" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="6.985" y1="1.27" x2="6.35" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="6.35" y1="-0.635" x2="6.985" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="8.255" y1="-1.27" x2="6.985" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="1.27" y1="0.635" x2="1.905" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="3.175" y1="1.27" x2="3.81" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="3.81" y1="-0.635" x2="3.175" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="3.175" y1="-1.27" x2="1.905" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="11.43" y1="0.635" x2="11.43" y2="-0.635" width="0.2032" layer="21"/>
 <pad name="1" x="0" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="2" x="2.54" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="3" x="5.08" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
@@ -11528,56 +11495,6 @@ IC needs to have legs bent before insertion.</description>
 &lt;p&gt;Example device(s):
 &lt;ul&gt;&lt;li&gt;CONN_08&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;</description>
-<wire x1="14.605" y1="1.27" x2="15.875" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="15.875" y1="1.27" x2="16.51" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="16.51" y1="-0.635" x2="15.875" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="11.43" y1="0.635" x2="12.065" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="12.065" y1="1.27" x2="13.335" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="13.335" y1="1.27" x2="13.97" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="13.97" y1="-0.635" x2="13.335" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="13.335" y1="-1.27" x2="12.065" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="12.065" y1="-1.27" x2="11.43" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="14.605" y1="1.27" x2="13.97" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="13.97" y1="-0.635" x2="14.605" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="15.875" y1="-1.27" x2="14.605" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="6.985" y1="1.27" x2="8.255" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="8.255" y1="1.27" x2="8.89" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="8.89" y1="-0.635" x2="8.255" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="8.89" y1="0.635" x2="9.525" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="9.525" y1="1.27" x2="10.795" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="10.795" y1="1.27" x2="11.43" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="11.43" y1="-0.635" x2="10.795" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="10.795" y1="-1.27" x2="9.525" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="9.525" y1="-1.27" x2="8.89" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="3.81" y1="0.635" x2="4.445" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="4.445" y1="1.27" x2="5.715" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="5.715" y1="1.27" x2="6.35" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="6.35" y1="-0.635" x2="5.715" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="5.715" y1="-1.27" x2="4.445" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="4.445" y1="-1.27" x2="3.81" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="6.985" y1="1.27" x2="6.35" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="6.35" y1="-0.635" x2="6.985" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="8.255" y1="-1.27" x2="6.985" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="1.27" y1="0.635" x2="1.905" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="3.175" y1="1.27" x2="3.81" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="3.81" y1="-0.635" x2="3.175" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="3.175" y1="-1.27" x2="1.905" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="17.145" y1="1.27" x2="18.415" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="18.415" y1="1.27" x2="19.05" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="19.05" y1="0.635" x2="19.05" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="19.05" y1="-0.635" x2="18.415" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="17.145" y1="1.27" x2="16.51" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="16.51" y1="-0.635" x2="17.145" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="18.415" y1="-1.27" x2="17.145" y2="-1.27" width="0.2032" layer="21"/>
 <pad name="1" x="0" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="2" x="2.54" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="3" x="5.08" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
@@ -11796,7 +11713,7 @@ IC needs to have legs bent before insertion.</description>
 <gate name="G$1" symbol="PIC32MX250F128B_DIP" x="27.94" y="2.54"/>
 </gates>
 <devices>
-<device name="" package="DIP28">
+<device name="" package="DIL28-3">
 <connects>
 <connect gate="G$1" pin="1.MCLR" pad="1"/>
 <connect gate="G$1" pin="10.A3" pad="10"/>
@@ -11976,7 +11893,7 @@ IC needs to have legs bent before insertion.</description>
 <part name="..." library="meche-433" deviceset="8MHZ_OSCILLATOR" device=""/>
 <part name="DIP_28" library="meche-433" deviceset="PIC32MX250F128_DIP" device=""/>
 <part name="U$5" library="meche-433" deviceset="SLIDE_SWITCH" device=""/>
-<part name="." library="meche-433" deviceset="USB_MINI_B" device=""/>
+<part name="USB" library="meche-433" deviceset="USB_MINI_B" device=""/>
 <part name="RESET" library="meche-433" deviceset="PUSH_BUTTON" device=""/>
 <part name="USER" library="meche-433" deviceset="PUSH_BUTTON" device=""/>
 <part name=".." library="meche-433" deviceset="PICKIT3" device=""/>
@@ -12004,7 +11921,7 @@ IC needs to have legs bent before insertion.</description>
 <instance part="..." gate="G$1" x="-2.54" y="12.7"/>
 <instance part="DIP_28" gate="G$1" x="91.44" y="53.34"/>
 <instance part="U$5" gate="G$1" x="5.08" y="127"/>
-<instance part="." gate="G$1" x="-104.14" y="119.38" rot="MR0"/>
+<instance part="USB" gate="G$1" x="-104.14" y="119.38" rot="MR0"/>
 <instance part="RESET" gate="G$1" x="5.08" y="101.6"/>
 <instance part="USER" gate="G$1" x="10.16" y="-10.16"/>
 <instance part=".." gate="G$1" x="0" y="35.56"/>
@@ -12016,7 +11933,7 @@ IC needs to have legs bent before insertion.</description>
 <nets>
 <net name="GND" class="0">
 <segment>
-<pinref part="." gate="G$1" pin="5.GND"/>
+<pinref part="USB" gate="G$1" pin="5.GND"/>
 <wire x1="-99.06" y1="114.3" x2="-81.28" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="REG" gate="G$1" pin="1.GND"/>
 <wire x1="-81.28" y1="114.3" x2="-55.88" y2="114.3" width="0.1524" layer="91"/>
@@ -12345,7 +12262,7 @@ IC needs to have legs bent before insertion.</description>
 <wire x1="81.28" y1="15.24" x2="86.36" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="." gate="G$1" pin="1.VBUS"/>
+<pinref part="USB" gate="G$1" pin="1.VBUS"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="-99.06" y1="124.46" x2="-81.28" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="-81.28" y1="124.46" x2="-81.28" y2="129.54" width="0.1524" layer="91"/>
@@ -12374,7 +12291,7 @@ IC needs to have legs bent before insertion.</description>
 </net>
 <net name="D-" class="0">
 <segment>
-<pinref part="." gate="G$1" pin="2.D-"/>
+<pinref part="USB" gate="G$1" pin="2.D-"/>
 <wire x1="-99.06" y1="121.92" x2="-96.52" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -12384,7 +12301,7 @@ IC needs to have legs bent before insertion.</description>
 </net>
 <net name="D+" class="0">
 <segment>
-<pinref part="." gate="G$1" pin="3.D+"/>
+<pinref part="USB" gate="G$1" pin="3.D+"/>
 <wire x1="-99.06" y1="119.38" x2="-96.52" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -12394,7 +12311,7 @@ IC needs to have legs bent before insertion.</description>
 </net>
 <net name="ID" class="0">
 <segment>
-<pinref part="." gate="G$1" pin="4.ID"/>
+<pinref part="USB" gate="G$1" pin="4.ID"/>
 <wire x1="-99.06" y1="116.84" x2="-96.52" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -12405,6 +12322,37 @@ IC needs to have legs bent before insertion.</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,-99.06,124.46,.,1.VBUS,VBUS,,,"/>
+<approved hash="104,1,-99.06,114.3,.,5.GND,GND,,,"/>
+<approved hash="110,1,45.72,81.28,A0,MCLR,,,,"/>
+<approved hash="111,1,45.72,81.28,A0,,,,,"/>
+<approved hash="115,1,-90.17,124.46,VBUS,,,,,"/>
+<approved hash="115,1,83.82,15.24,VBUS,,,,,"/>
+<approved hash="115,1,95.25,53.34,VBUS,,,,,"/>
+<approved hash="115,1,6.35,25.4,GND,,,,,"/>
+<approved hash="115,1,95.25,50.8,GND,,,,,"/>
+<approved hash="115,1,6.35,68.58,GND,,,,,"/>
+<approved hash="115,1,44.45,45.72,GND,,,,,"/>
+<approved hash="115,1,-16.51,12.7,GND,,,,,"/>
+<approved hash="115,1,115.57,40.64,GND,,,,,"/>
+<approved hash="115,1,90.17,76.2,GND,,,,,"/>
+<approved hash="115,1,-90.17,114.3,GND,,,,,"/>
+<approved hash="115,1,82.55,50.8,D-,,,,,"/>
+<approved hash="115,1,-97.79,121.92,D-,,,,,"/>
+<approved hash="115,1,82.55,55.88,V3.3,,,,,"/>
+<approved hash="115,1,27.94,2.54,V3.3,,,,,"/>
+<approved hash="115,1,82.55,35.56,V3.3,,,,,"/>
+<approved hash="115,1,6.35,30.48,V3.3,,,,,"/>
+<approved hash="115,1,6.35,71.12,V3.3,,,,,"/>
+<approved hash="115,1,24.13,127,V3.3,,,,,"/>
+<approved hash="115,1,81.28,82.55,V3.3,,,,,"/>
+<approved hash="115,1,-33.02,45.72,V3.3,,,,,"/>
+<approved hash="115,1,82.55,45.72,D+,,,,,"/>
+<approved hash="115,1,-97.79,119.38,D+,,,,,"/>
+<approved hash="115,1,44.45,15.24,ID,,,,,"/>
+<approved hash="115,1,-97.79,116.84,ID,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
