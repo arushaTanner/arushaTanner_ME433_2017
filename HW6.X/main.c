@@ -1,7 +1,7 @@
-#include<xc.h>           // processor SFR definitions
-#include<sys/attribs.h>  // __ISR macro
-#include "i2c_master.h"
-#include "io_expander.h"
+#include "LED.h"
+#include <xc.h>           // processor SFR definitions
+#include <sys/attribs.h>  // __ISR macro
+#include <stdio.h>
 
 // DEVCFG0
 #pragma config DEBUG = 0b10 // no debugging
@@ -64,22 +64,22 @@ int main() {
     //turn off analog pins
     ANSELBbits.ANSB2 = 0;
     ANSELBbits.ANSB3 = 0;
-    
-    //setup i2c communication
-    i2c_master_setup();
-    
-    //setup expander
-    io_expander_init();
+        
+    //initialize LCD screen
+    SPI1_init();
+    LCD_init();
     
     __builtin_enable_interrupts();
+ 
     
-    //debugging functions
-    io_expander_sset(0,1);
-    //io_expander_get();
-    //io_expander_set(0,1);
-    LED=1;
     
-    unsigned char pin=0;
+    LCD_clearScreen(BLACK);
+    
+    char msg[50];
+    sprintf(msg,"Brandon Tanner");
+    LCD_drawString(msg,GREEN,BLACK,10,10);
+    
+    int counter=0;
     
     while(1) {
 	    // use _CP0_SET_COUNT(0) and _CP0_GET_COUNT() to test the PIC timing
@@ -87,13 +87,22 @@ int main() {
         
         if(PUSH_BUTTON==0)LED=1;
         else if (PUSH_BUTTON==1)LED=0;
-  
-        //code still doesn't work yet
- /*       pin=io_expander_get();
-        pin=pin>>7;
-        if(pin==0)io_expander_set(0,0);
-        else if(pin==1)io_expander_set(0,1);*/
         
+        _CP0_SET_COUNT(0);
+        while(_CP0_GET_COUNT()<500000){}
         
+        //code for the bar
+        sprintf(msg,"Hello World:%i   ",counter);
+        LCD_drawString(msg,RED,BLACK,18,32);
+        
+        //if(counter==-50)LCD_drawBar(-50,50,0,YELLOW);
+        //else if(counter<0) LCD_drawBar(0,counter,-50,YELLOW);
+        if(counter==50) LCD_drawBar(0,50,50,BLACK,BLACK);
+        else if(counter>0) LCD_drawBar(0,counter,50,YELLOW,BLACK);
+        else LCD_drawBar(-50,counter,0,BLACK,YELLOW);
+        
+        counter++;
+        if(counter==51)counter=-50;
+              
     }
 }

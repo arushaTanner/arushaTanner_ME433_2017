@@ -10,9 +10,9 @@
 void i2c_master_setup(void) {
     //baud rate gage for 100kHz
     //PGD=104ns, Pbclk =48MHz,I2CBRG=235;
-  I2C2BRG = 0xEC;            // I2CBRG = [1/(2*Fsck) - PGD]*Pblck - 2
+  I2C2BRG = 233;            // I2CBRG = [1/(2*Fsck) - PGD]*Pblck - 2
                                     // look up PGD for your PIC32
-  I2C2CONbits.ON = 1;               // turn on the I2C1 module
+  I2C2CONbits.ON = 1;               // turn on the I2C2 module
 }
 
 // Start a transmission on the I2C bus
@@ -27,7 +27,7 @@ void i2c_master_restart(void) {
 }
 
 void i2c_master_send(unsigned char byte) { // send a byte to slave
-  I2C1TRN = byte;                   // if an address, bit 0 = 0 for write, 1 for read
+  I2C2TRN = byte;                   // if an address, bit 0 = 0 for write, 1 for read
   while(I2C2STATbits.TRSTAT) { ; }  // wait for the transmission to finish
   if(I2C2STATbits.ACKSTAT) {        // if this is high, slave has not acknowledged
     // ("I2C2 Master: failed to receive ACK\r\n");

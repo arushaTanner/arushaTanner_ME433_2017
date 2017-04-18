@@ -3,10 +3,10 @@
 
 void io_expander_init(void)
 {
-    unsigned char pin_function = 0b00000000;
+    unsigned char pin_function = 0b00001111;
     
     i2c_master_start();//send signal to start transfer
-    i2c_master_send(expander_addr<<1);
+    i2c_master_send(expander_addr<<1|0);
     i2c_master_send(EXtrisbits);//send address of the tris bits
     i2c_master_send(pin_function);//set pins G0-G3 to be outputs and G4-G7 to be inputs
     i2c_master_stop();
