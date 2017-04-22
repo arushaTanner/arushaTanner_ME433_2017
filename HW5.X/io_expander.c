@@ -45,14 +45,4 @@ void io_expander_set(unsigned char pin,unsigned char level)
     i2c_master_stop();
 }
 
-void io_expander_sset(unsigned char pin,unsigned char level)
-{
-    unsigned char bit_value=0b10000;//level<<pin;
-    i2c_master_start();
-    i2c_master_send(SLAVE_ADDR<<1|0);
-    i2c_master_send(EXportbits);
-    i2c_master_send(bit_value);
-    i2c_master_stop();
-}
-
 

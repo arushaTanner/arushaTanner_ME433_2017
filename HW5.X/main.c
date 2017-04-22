@@ -106,7 +106,9 @@ int main() {
         }
   
         pin=io_expander_get();
-        if(pin&1==0b0)
+        sprintf(msg,"wtf: %i",pin);
+        LCD_drawString(msg,GREEN,BLACK,10,20);
+        if((pin&1)==0b0)
         {  
             io_expander_set(7,1); 
         }

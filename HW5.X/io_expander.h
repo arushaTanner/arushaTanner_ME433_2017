@@ -10,8 +10,6 @@ void io_expander_init(void);
 
 void io_expander_set(unsigned char pin,unsigned char level);
 
-void io_expander_sset(unsigned char pin,unsigned char level);
-
 unsigned char io_expander_get(void);
 
 #endif /* _IO_EXPANDER_H */
