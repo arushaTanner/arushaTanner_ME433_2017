@@ -2,27 +2,29 @@
 #include<sys/attribs.h>  // __ISR macro
 #include "i2c_master.h"
 #include "io_expander.h"
+#include "LED.h"
+#include <stdio.h>
 
 // DEVCFG0
-#pragma config DEBUG = 0b10 // no debugging
-#pragma config JTAGEN = 0 // no jtag
-#pragma config ICESEL =  0b11// use PGED1 and PGEC1
-#pragma config PWP = 0b1111111 // no write protect
-#pragma config BWP = 1 // no boot write protect
-#pragma config CP = 1 // no code protect
+#pragma config DEBUG = OFF // no debugging 
+#pragma config JTAGEN = OFF // no jtag
+#pragma config ICESEL =  ICS_PGx1// use PGED1 and PGEC1
+#pragma config PWP = OFF // no write protect
+#pragma config BWP = OFF // no boot write protect
+#pragma config CP = OFF // no code protect
 
 // DEVCFG1
 #pragma config FNOSC = PRIPLL // use primary oscillator with pll
 #pragma config FSOSCEN = OFF // turn off secondary oscillator
 #pragma config IESO = OFF // no switching clocks
-#pragma config POSCMOD = 0b10 // high speed crystal mode
-#pragma config OSCIOFNC = 1 // free up secondary osc pins
-#pragma config FPBDIV = 0b00 // divide CPU freq by 1 for peripheral bus clock
-#pragma config FCKSM = 0b11 // do not enable clock switch
-#pragma config WDTPS = 0b10100 // slowest wdt
-#pragma config WINDIS = 1 // no wdt window
-#pragma config FWDTEN = 0 // wdt off by default
-#pragma config FWDTWINSZ = 0b11 // wdt window at 25%
+#pragma config POSCMOD = HS // high speed crystal mode
+#pragma config OSCIOFNC = OFF // free up secondary osc pins
+#pragma config FPBDIV = DIV_1 // divide CPU freq by 1 for peripheral bus clock
+#pragma config FCKSM = CSDCMD // do not enable clock switch
+#pragma config WDTPS = PS1048576 // slowest wdt
+#pragma config WINDIS = OFF // no wdt window
+#pragma config FWDTEN = OFF // wdt off by default
+#pragma config FWDTWINSZ = WINSZ_25 // wdt window at 25%
 
 // DEVCFG2 - get the CPU clock to 48MHz
 #pragma config FPLLIDIV = DIV_2 // divide input clock to be in range 4-5MHz
@@ -65,6 +67,10 @@ int main() {
     ANSELBbits.ANSB2 = 0;
     ANSELBbits.ANSB3 = 0;
     
+    //setup LCD screen
+    SPI1_init();
+    LCD_init();
+    
     //setup i2c communication
     i2c_master_setup();
     
@@ -73,26 +79,41 @@ int main() {
     
     __builtin_enable_interrupts();
     
-    //debugging functions
-    io_expander_sset(0,1);
-    //io_expander_get();
-    //io_expander_set(0,1);
-    LED=1;
+    //string for debugging this stupid piece of code
+    char msg[50];
+    LCD_clearScreen(BLACK);    
+    sprintf(msg,"Brandon");
+    LCD_drawString(msg,GREEN,BLACK,10,10);
     
-    unsigned char pin=0;
+    
+    
+    
+    unsigned char pin=1;
     
     while(1) {
 	    // use _CP0_SET_COUNT(0) and _CP0_GET_COUNT() to test the PIC timing
 		  // remember the core timer runs at half the CPU speed
         
-        if(PUSH_BUTTON==0)LED=1;
-        else if (PUSH_BUTTON==1)LED=0;
+        if(PUSH_BUTTON==0)
+        {
+            //io_expander_set(7,0);
+            LED=1;
+        }
+        else if (PUSH_BUTTON==1)
+        {
+            //io_expander_set(7,1);
+            LED=0;
+        }
   
-        //code still doesn't work yet
- /*       pin=io_expander_get();
-        pin=pin>>7;
-        if(pin==0)io_expander_set(0,0);
-        else if(pin==1)io_expander_set(0,1);*/
+        pin=io_expander_get();
+        if(pin&1==0b0)
+        {  
+            io_expander_set(7,1); 
+        }
+        else
+        {
+            io_expander_set(7,0);
+        }
         
         
     }
