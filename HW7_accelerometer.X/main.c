@@ -46,15 +46,19 @@
 #define address 0b1101010
 #define WHO_AM_I 0x0F
 #define OUTPUT 0x20
+#define CTRL1_XL 0x10 //0b10000010
+#define CTRL2_G 0x11 //0b10001000
+#define CTRL3_C 0x12 //0b00000100 -> default value
 
 unsigned char read(unsigned char reg);
+void accel_init();
 
 int main() {
 
-    TRISAbits.TRISA4=0;
-    TRISBbits.TRISB4=1;
-    LED=0;
-    
+    TRISAbits.TRISA4 = 0;
+    TRISBbits.TRISB4 = 1;
+    LED = 0;
+
     __builtin_disable_interrupts();
 
     // set the CP0 CONFIG register to indicate that kseg0 is cacheable (0x3)
@@ -68,75 +72,127 @@ int main() {
 
     // disable JTAG to get pins back
     DDPCONbits.JTAGEN = 0;
-    
+
     //turn off analog pins
     ANSELBbits.ANSB2 = 0;
     ANSELBbits.ANSB3 = 0;
-    
+
     //setup LCD screen
     SPI1_init();
     LCD_init();
-    
+
     //setup i2c communication
     i2c_master_setup();
-        
+
+    //initialize accelerometer
+    accel_init();
+
     __builtin_enable_interrupts();
-    
+
     //string for debugging this stupid piece of code
     char msg[50];
     LCD_clearScreen(BLACK);
-    sprintf(msg,"Tanner");
-    LCD_drawString(msg,GREEN,BLACK,10,10);
+    sprintf(msg, "Tanner");
+    LCD_drawString(msg, GREEN, BLACK, 10, 10);
+
+    //unsigned char whoami = read(WHO_AM_I);
+    //sprintf(msg, "who: %i", whoami);
+    //LCD_drawString(msg, GREEN, BLACK, 10, 20);
     
-    unsigned char whoami=read(WHO_AM_I);
-    
-    sprintf(msg,"who: %i",whoami);
-    LCD_drawString(msg,GREEN,BLACK,10,20);
-    
-    while(1) {
-	    // use _CP0_SET_COUNT(0) and _CP0_GET_COUNT() to test the PIC timing
-		  // remember the core timer runs at half the CPU speed
+    short data[7];
+
+    while (1) {
+        // use _CP0_SET_COUNT(0) and _CP0_GET_COUNT() to test the PIC timing
+        // remember the core timer runs at half the CPU speed
+
+        if (PUSH_BUTTON == 0)LED = 1;
+        else if (PUSH_BUTTON == 1)LED = 0;
         
-        if(PUSH_BUTTON==0)LED=1;
-        else if (PUSH_BUTTON==1)LED=0;
-  
+        _CP0_SET_COUNT(0);
+        while(_CP0_GET_COUNT()<48000000/2/10);
         
+        read_data(data,7);
         
+        //draw bars in x direction
+        int x=-1*data[4];
+        x=(x*50)/16000;
+        LCD_drawBarX(x,RED,BLACK);
+        LCD_drawBarX(-x,BLACK,BLACK);
+        
+        //draw bars in y direction
+        int y=-1*data[5];
+        y=(y*50)/16000;
+        LCD_drawBarY(y,RED,BLACK);
+        LCD_drawBarY(-y,BLACK,BLACK);
+        
+        //draw center
+        LCD_drawCenter(BLUE);
+        
+        sprintf(msg, "x:%i  ",x);
+        LCD_drawString(msg,GREEN,BLACK,70,10);
+        sprintf(msg,"y:%i  ",y);
+        LCD_drawString(msg,GREEN,BLACK,70,20);
+        
+
+
     }
 }
 
-unsigned char read(unsigned char reg)
-{
+unsigned char read(unsigned char reg) {
     i2c_master_start();
-    i2c_master_send(address<<1|0);
+    i2c_master_send(address << 1 | 0);
     i2c_master_send(reg);
     i2c_master_restart();
-    i2c_master_send(address<<1|1);
-    unsigned char data=i2c_master_recv();
+    i2c_master_send(address << 1 | 1);
+    unsigned char data = i2c_master_recv();
     i2c_master_ack(1);
     i2c_master_stop();
-    
-    return data;   
+
+    return data;
 }
 
-void read_data(short *data,int length)
-{
+//read function where data is 1/2 length. Each read is half of the data.
+void read_data(short *data, int length) {
     i2c_master_start();
-    i2c_master_send(address<<1|0);
+    i2c_master_send(address << 1 | 0);
     i2c_master_send(OUTPUT);
     i2c_master_restart();
-    i2c_master_send(address<<1|1);
-    
-    unsigned char d1=0;
-    unsigned char d2=0;
+    i2c_master_send(address << 1 | 1);
+
+    unsigned char d1 = 0;
+    unsigned char d2 = 0;
     
     int i;
-    for(i=0;i<length;i++)
-    {
-        d1=i2c_master_recv();
+    for (i = 0; i < length; i++) {
+        d1 = i2c_master_recv();
         i2c_master_ack(0);
-        d2=i2c_master_recv();
-        i2c_master_ack(0);
-        data[i]=d1<<8|d2;
+        d2 = i2c_master_recv();
+        if(i==(length-1))i2c_master_ack(1);
+        else(i2c_master_ack(0));
+        data[i] = (d2 << 8 )| d1;
     }
+    i2c_master_stop();
+}
+
+
+
+void accel_init()
+{
+    i2c_master_start();
+    i2c_master_send(address << 1 | 0);
+    i2c_master_send(CTRL1_XL);
+    i2c_master_send(0b10000010);
+    i2c_master_stop();
+
+    i2c_master_start();
+    i2c_master_send(address << 1 | 0);
+    i2c_master_send(CTRL2_G);
+    i2c_master_send(0b10001000);
+    i2c_master_stop();
+
+    i2c_master_start();
+    i2c_master_send(address << 1 | 0);
+    i2c_master_send(CTRL3_C);
+    i2c_master_send(0b00000100);
+    i2c_master_stop();
 }
