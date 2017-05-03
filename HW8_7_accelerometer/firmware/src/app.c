@@ -218,9 +218,7 @@ void APP_Tasks(void) {
             LED = 0;
 
 
-            //turn off analog pins
-            ANSELBbits.ANSB2 = 0;
-            ANSELBbits.ANSB3 = 0;
+            
 
             //setup LCD screen
             SPI1_init();
